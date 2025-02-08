@@ -16,7 +16,10 @@ const RoomOccupants = () => {
                 },
             }
         );
-        setOccupants(res);
+        if (res != null) {
+            console.log(res.data.length > 0);
+            setOccupants(res.data[0]);
+        }
     };
 
     return (
